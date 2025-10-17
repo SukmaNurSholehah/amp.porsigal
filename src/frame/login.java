@@ -35,24 +35,28 @@ public class login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(140, 22, 22));
+        jPanel1.setBackground(new java.awt.Color(250, 240, 230));
         jPanel1.setPreferredSize(new java.awt.Dimension(500, 500));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/logo porsigal 100x100.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(140, 22, 22));
         jLabel2.setText("AMP PORSIGAL");
 
-        tUsername.setBackground(new java.awt.Color(250, 240, 230));
-        tUsername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        tUsername.setPreferredSize(new java.awt.Dimension(200, 35));
+        tUsername.setBackground(new java.awt.Color(140, 22, 22));
+        tUsername.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tUsername.setForeground(new java.awt.Color(255, 255, 255));
+        tUsername.setPreferredSize(new java.awt.Dimension(300, 35));
 
-        tPassword.setBackground(new java.awt.Color(250, 240, 230));
-        tPassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        tPassword.setPreferredSize(new java.awt.Dimension(200, 35));
+        tPassword.setBackground(new java.awt.Color(140, 22, 22));
+        tPassword.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tPassword.setForeground(new java.awt.Color(255, 255, 255));
+        tPassword.setPreferredSize(new java.awt.Dimension(300, 35));
 
-        bLogin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bLogin.setBackground(new java.awt.Color(140, 22, 22));
+        bLogin.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        bLogin.setForeground(new java.awt.Color(255, 255, 255));
         bLogin.setText("Login");
         bLogin.setPreferredSize(new java.awt.Dimension(200, 35));
 
@@ -67,12 +71,14 @@ public class login extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(157, 157, 157)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(tPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(143, Short.MAX_VALUE))
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tUsername, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(tPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,8 +92,8 @@ public class login extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(tPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addComponent(bLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addComponent(bLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

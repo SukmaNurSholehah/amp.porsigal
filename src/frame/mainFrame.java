@@ -5,6 +5,7 @@
 package frame;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import java.awt.Color;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -19,6 +20,12 @@ public class mainFrame extends javax.swing.JFrame {
      */
     public mainFrame() {
         initComponents();
+        //menyembunyikan sub panel
+        pnSubMenuAnggota.setVisible(false);
+        pnSubMenuJadwal.setVisible(false);
+        pnSubMenuEvent.setVisible(false);
+        pnSubMenuLaporan.setVisible(false);
+        pnSubMenuPengaturan.setVisible(false);
     }
 
     /**
@@ -31,50 +38,451 @@ public class mainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        sidebar = new javax.swing.JPanel();
+        pnKiri = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        sidebar = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        bDashboard = new javax.swing.JButton();
+        bAnggota = new javax.swing.JButton();
+        pnSubMenuAnggota = new javax.swing.JPanel();
+        bDataA = new javax.swing.JButton();
+        bRiwayatL = new javax.swing.JButton();
+        bJadwal = new javax.swing.JButton();
+        pnSubMenuJadwal = new javax.swing.JPanel();
+        bJDataJadwal = new javax.swing.JButton();
+        bJAbsensi = new javax.swing.JButton();
+        bEvent = new javax.swing.JButton();
+        pnSubMenuEvent = new javax.swing.JPanel();
+        bEDataEvent = new javax.swing.JButton();
+        bERegistrasi = new javax.swing.JButton();
+        bEHasil = new javax.swing.JButton();
+        bPrestasi = new javax.swing.JButton();
+        pnSubMenuLaporan = new javax.swing.JPanel();
+        bLanggota = new javax.swing.JButton();
+        bLRiwayat = new javax.swing.JButton();
+        bLaporan = new javax.swing.JButton();
+        bPengaturan = new javax.swing.JButton();
+        pnSubMenuPengaturan = new javax.swing.JPanel();
+        bPManajemen = new javax.swing.JButton();
+        bPAbout = new javax.swing.JButton();
         content = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1262, 700));
 
         mainPanel.setPreferredSize(new java.awt.Dimension(1250, 700));
 
-        sidebar.setBackground(new java.awt.Color(140, 22, 22));
+        pnKiri.setBackground(new java.awt.Color(140, 22, 22));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/logo_porsigal_37x37-removebg-preview.png"))); // NOI18N
         jLabel1.setText(" AMP PORSIGAL");
 
+        sidebar.setPreferredSize(new java.awt.Dimension(300, 645));
+
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(300, 645));
+
+        jPanel1.setBackground(new java.awt.Color(140, 22, 22));
+        jPanel1.setPreferredSize(new java.awt.Dimension(300, 645));
+
+        bDashboard.setBackground(new java.awt.Color(140, 22, 22));
+        bDashboard.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bDashboard.setForeground(new java.awt.Color(255, 255, 255));
+        bDashboard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-dashboard-20 (1).png"))); // NOI18N
+        bDashboard.setText("Dashboard");
+        bDashboard.setBorder(null);
+        bDashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bDashboardActionPerformed(evt);
+            }
+        });
+
+        bAnggota.setBackground(new java.awt.Color(140, 22, 22));
+        bAnggota.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bAnggota.setForeground(new java.awt.Color(255, 255, 255));
+        bAnggota.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-member-20.png"))); // NOI18N
+        bAnggota.setText("Anggota");
+        bAnggota.setBorder(null);
+        bAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAnggotaActionPerformed(evt);
+            }
+        });
+
+        pnSubMenuAnggota.setBackground(new java.awt.Color(140, 22, 22));
+
+        bDataA.setBackground(new java.awt.Color(140, 22, 22));
+        bDataA.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bDataA.setForeground(new java.awt.Color(255, 255, 255));
+        bDataA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-member-20.png"))); // NOI18N
+        bDataA.setText("Data Anggota");
+        bDataA.setBorder(null);
+
+        bRiwayatL.setBackground(new java.awt.Color(140, 22, 22));
+        bRiwayatL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bRiwayatL.setForeground(new java.awt.Color(255, 255, 255));
+        bRiwayatL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-activity-history-20.png"))); // NOI18N
+        bRiwayatL.setText("Riwayat Latihan");
+        bRiwayatL.setBorder(null);
+
+        javax.swing.GroupLayout pnSubMenuAnggotaLayout = new javax.swing.GroupLayout(pnSubMenuAnggota);
+        pnSubMenuAnggota.setLayout(pnSubMenuAnggotaLayout);
+        pnSubMenuAnggotaLayout.setHorizontalGroup(
+            pnSubMenuAnggotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSubMenuAnggotaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnSubMenuAnggotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bRiwayatL)
+                    .addComponent(bDataA))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+        pnSubMenuAnggotaLayout.setVerticalGroup(
+            pnSubMenuAnggotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSubMenuAnggotaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bDataA)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bRiwayatL)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        bJadwal.setBackground(new java.awt.Color(140, 22, 22));
+        bJadwal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bJadwal.setForeground(new java.awt.Color(255, 255, 255));
+        bJadwal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-training-20.png"))); // NOI18N
+        bJadwal.setText("Jadwal Latihan");
+        bJadwal.setBorder(null);
+        bJadwal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bJadwalActionPerformed(evt);
+            }
+        });
+
+        pnSubMenuJadwal.setBackground(new java.awt.Color(140, 22, 22));
+
+        bJDataJadwal.setBackground(new java.awt.Color(140, 22, 22));
+        bJDataJadwal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bJDataJadwal.setForeground(new java.awt.Color(255, 255, 255));
+        bJDataJadwal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-training-20.png"))); // NOI18N
+        bJDataJadwal.setText("Data Jadwal Latihan");
+        bJDataJadwal.setBorder(null);
+        bJDataJadwal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bJDataJadwalActionPerformed(evt);
+            }
+        });
+
+        bJAbsensi.setBackground(new java.awt.Color(140, 22, 22));
+        bJAbsensi.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bJAbsensi.setForeground(new java.awt.Color(255, 255, 255));
+        bJAbsensi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-absence-20.png"))); // NOI18N
+        bJAbsensi.setText("Absensi");
+        bJAbsensi.setBorder(null);
+
+        javax.swing.GroupLayout pnSubMenuJadwalLayout = new javax.swing.GroupLayout(pnSubMenuJadwal);
+        pnSubMenuJadwal.setLayout(pnSubMenuJadwalLayout);
+        pnSubMenuJadwalLayout.setHorizontalGroup(
+            pnSubMenuJadwalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnSubMenuJadwalLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bJDataJadwal)
+                .addGap(61, 61, 61))
+            .addGroup(pnSubMenuJadwalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bJAbsensi)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnSubMenuJadwalLayout.setVerticalGroup(
+            pnSubMenuJadwalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSubMenuJadwalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bJDataJadwal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bJAbsensi)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        bEvent.setBackground(new java.awt.Color(140, 22, 22));
+        bEvent.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bEvent.setForeground(new java.awt.Color(255, 255, 255));
+        bEvent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-event-20.png"))); // NOI18N
+        bEvent.setText("Event & Ujian");
+        bEvent.setBorder(null);
+        bEvent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bEventActionPerformed(evt);
+            }
+        });
+
+        pnSubMenuEvent.setBackground(new java.awt.Color(140, 22, 22));
+
+        bEDataEvent.setBackground(new java.awt.Color(140, 22, 22));
+        bEDataEvent.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bEDataEvent.setForeground(new java.awt.Color(255, 255, 255));
+        bEDataEvent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-event-20.png"))); // NOI18N
+        bEDataEvent.setText("Data Event & Ujian");
+        bEDataEvent.setBorder(null);
+        bEDataEvent.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bEDataEvent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bEDataEventActionPerformed(evt);
+            }
+        });
+
+        bERegistrasi.setBackground(new java.awt.Color(140, 22, 22));
+        bERegistrasi.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bERegistrasi.setForeground(new java.awt.Color(255, 255, 255));
+        bERegistrasi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-registration-20.png"))); // NOI18N
+        bERegistrasi.setText("Registrasi");
+        bERegistrasi.setBorder(null);
+        bERegistrasi.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+
+        bEHasil.setBackground(new java.awt.Color(140, 22, 22));
+        bEHasil.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bEHasil.setForeground(new java.awt.Color(255, 255, 255));
+        bEHasil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-report-card-20.png"))); // NOI18N
+        bEHasil.setText("Hasil Event & Ujian");
+        bEHasil.setBorder(null);
+
+        javax.swing.GroupLayout pnSubMenuEventLayout = new javax.swing.GroupLayout(pnSubMenuEvent);
+        pnSubMenuEvent.setLayout(pnSubMenuEventLayout);
+        pnSubMenuEventLayout.setHorizontalGroup(
+            pnSubMenuEventLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSubMenuEventLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnSubMenuEventLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bEDataEvent)
+                    .addComponent(bERegistrasi)
+                    .addComponent(bEHasil))
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+        pnSubMenuEventLayout.setVerticalGroup(
+            pnSubMenuEventLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSubMenuEventLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bEDataEvent)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bERegistrasi)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bEHasil)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        bPrestasi.setBackground(new java.awt.Color(140, 22, 22));
+        bPrestasi.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bPrestasi.setForeground(new java.awt.Color(255, 255, 255));
+        bPrestasi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-performance-20.png"))); // NOI18N
+        bPrestasi.setText("Prestasi");
+        bPrestasi.setBorder(null);
+        bPrestasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPrestasiActionPerformed(evt);
+            }
+        });
+
+        pnSubMenuLaporan.setBackground(new java.awt.Color(140, 22, 22));
+
+        bLanggota.setBackground(new java.awt.Color(140, 22, 22));
+        bLanggota.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bLanggota.setForeground(new java.awt.Color(255, 255, 255));
+        bLanggota.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-member-20.png"))); // NOI18N
+        bLanggota.setText("Anggota");
+        bLanggota.setBorder(null);
+
+        bLRiwayat.setBackground(new java.awt.Color(140, 22, 22));
+        bLRiwayat.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bLRiwayat.setForeground(new java.awt.Color(255, 255, 255));
+        bLRiwayat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-activity-history-20.png"))); // NOI18N
+        bLRiwayat.setText("Riwayat Event & Ujian");
+        bLRiwayat.setBorder(null);
+
+        javax.swing.GroupLayout pnSubMenuLaporanLayout = new javax.swing.GroupLayout(pnSubMenuLaporan);
+        pnSubMenuLaporan.setLayout(pnSubMenuLaporanLayout);
+        pnSubMenuLaporanLayout.setHorizontalGroup(
+            pnSubMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSubMenuLaporanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnSubMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bLanggota)
+                    .addComponent(bLRiwayat))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnSubMenuLaporanLayout.setVerticalGroup(
+            pnSubMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSubMenuLaporanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bLanggota)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bLRiwayat)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        bLaporan.setBackground(new java.awt.Color(140, 22, 22));
+        bLaporan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bLaporan.setForeground(new java.awt.Color(255, 255, 255));
+        bLaporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-report-20.png"))); // NOI18N
+        bLaporan.setText("Laporan");
+        bLaporan.setBorder(null);
+        bLaporan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bLaporanActionPerformed(evt);
+            }
+        });
+
+        bPengaturan.setBackground(new java.awt.Color(140, 22, 22));
+        bPengaturan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bPengaturan.setForeground(new java.awt.Color(255, 255, 255));
+        bPengaturan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-setting-20.png"))); // NOI18N
+        bPengaturan.setText("Pengaturan");
+        bPengaturan.setBorder(null);
+        bPengaturan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPengaturanActionPerformed(evt);
+            }
+        });
+
+        pnSubMenuPengaturan.setBackground(new java.awt.Color(140, 22, 22));
+
+        bPManajemen.setBackground(new java.awt.Color(140, 22, 22));
+        bPManajemen.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bPManajemen.setForeground(new java.awt.Color(255, 255, 255));
+        bPManajemen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-management-20.png"))); // NOI18N
+        bPManajemen.setText("Manajemen User");
+        bPManajemen.setBorder(null);
+
+        bPAbout.setBackground(new java.awt.Color(140, 22, 22));
+        bPAbout.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bPAbout.setForeground(new java.awt.Color(255, 255, 255));
+        bPAbout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-about-20.png"))); // NOI18N
+        bPAbout.setText("About");
+        bPAbout.setBorder(null);
+
+        javax.swing.GroupLayout pnSubMenuPengaturanLayout = new javax.swing.GroupLayout(pnSubMenuPengaturan);
+        pnSubMenuPengaturan.setLayout(pnSubMenuPengaturanLayout);
+        pnSubMenuPengaturanLayout.setHorizontalGroup(
+            pnSubMenuPengaturanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSubMenuPengaturanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnSubMenuPengaturanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bPManajemen)
+                    .addComponent(bPAbout))
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+        pnSubMenuPengaturanLayout.setVerticalGroup(
+            pnSubMenuPengaturanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSubMenuPengaturanLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bPManajemen)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bPAbout))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bAnggota)
+                    .addComponent(bDashboard)
+                    .addComponent(bJadwal)
+                    .addComponent(bEvent)
+                    .addComponent(bPengaturan)
+                    .addComponent(bPrestasi)
+                    .addComponent(bLaporan))
+                .addContainerGap(124, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(pnSubMenuEvent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pnSubMenuJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pnSubMenuAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(pnSubMenuLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(pnSubMenuPengaturan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bDashboard)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bAnggota)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnSubMenuAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bJadwal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnSubMenuJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bEvent)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnSubMenuEvent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bPrestasi)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bLaporan)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnSubMenuLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bPengaturan)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnSubMenuPengaturan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jScrollPane1.setViewportView(jPanel1);
+
         javax.swing.GroupLayout sidebarLayout = new javax.swing.GroupLayout(sidebar);
         sidebar.setLayout(sidebarLayout);
         sidebarLayout.setHorizontalGroup(
             sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sidebarLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addContainerGap(58, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         sidebarLayout.setVerticalGroup(
             sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sidebarLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnKiriLayout = new javax.swing.GroupLayout(pnKiri);
+        pnKiri.setLayout(pnKiriLayout);
+        pnKiriLayout.setHorizontalGroup(
+            pnKiriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnKiriLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnKiriLayout.createSequentialGroup()
+                .addComponent(sidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        pnKiriLayout.setVerticalGroup(
+            pnKiriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnKiriLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(657, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         content.setBackground(new java.awt.Color(250, 240, 230));
-
-        javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
-        content.setLayout(contentLayout);
-        contentLayout.setHorizontalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
-        );
-        contentLayout.setVerticalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-        );
+        content.setPreferredSize(new java.awt.Dimension(950, 700));
+        content.setLayout(new java.awt.CardLayout());
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
@@ -82,19 +490,18 @@ public class mainFrame extends javax.swing.JFrame {
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(sidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnKiri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, 926, Short.MAX_VALUE)
+                .addGap(12, 12, 12))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pnKiri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -102,21 +509,152 @@ public class mainFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDashboardActionPerformed
+        // TODO add your handling code here:
+       /*mengatur warna saat tombol di klik
+        bDashboard.setBackground(new Color(0, 0, 0));  
+        bAnggota.setBackground(new Color(140, 22, 22));
+        bJadwal.setBackground(new Color(140, 22, 22));
+        bEvent.setBackground(new Color(140, 22, 22));
+        bPrestasi.setBackground(new Color(140, 22, 22));
+        bLaporan.setBackground(new Color(140, 22, 22));
+        bPengaturan.setBackground(new Color(140, 22, 22));*/
+        
+        //menyembunyikan sub panel
+        pnSubMenuAnggota.setVisible(false);
+        pnSubMenuJadwal.setVisible(false);
+        pnSubMenuEvent.setVisible(false);
+        pnSubMenuLaporan.setVisible(false);
+        pnSubMenuPengaturan.setVisible(false);
+        
+        content.removeAll();
+        content.add(new dashboard());
+        content.repaint();
+        content.revalidate();
+    }//GEN-LAST:event_bDashboardActionPerformed
+
+    private void bAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnggotaActionPerformed
+        // TODO add your handling code here:
+        //menyembunyikan sub panel
+        pnSubMenuJadwal.setVisible(false);
+        pnSubMenuEvent.setVisible(false);
+        pnSubMenuLaporan.setVisible(false);
+        pnSubMenuPengaturan.setVisible(false);
+        
+        // mengecek panel apakah kosong
+        if (pnSubMenuAnggota.isVisible()){
+            pnSubMenuAnggota.setVisible(false);
+        } else {
+            pnSubMenuAnggota.setVisible(true);
+        }
+        
+    }//GEN-LAST:event_bAnggotaActionPerformed
+
+    private void bJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bJadwalActionPerformed
+        // TODO add your handling code here:
+        //menyembunyikan sub panel
+        pnSubMenuAnggota.setVisible(false);
+        pnSubMenuEvent.setVisible(false);
+        pnSubMenuLaporan.setVisible(false);
+        pnSubMenuPengaturan.setVisible(false);
+        
+        // mengecek panel apakah kosong
+        if (pnSubMenuJadwal.isVisible()){
+            pnSubMenuJadwal.setVisible(false);
+        } else {
+            pnSubMenuJadwal.setVisible(true);
+        }
+        
+    }//GEN-LAST:event_bJadwalActionPerformed
+
+    private void bEventActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEventActionPerformed
+        // TODO add your handling code here:
+        //menyembunyikan sub panel
+        pnSubMenuAnggota.setVisible(false);
+        pnSubMenuJadwal.setVisible(false);
+        pnSubMenuLaporan.setVisible(false);
+        pnSubMenuPengaturan.setVisible(false);
+        
+        /*mengatur warna saat tombol di klik
+        bEvent.setBackground(new Color(0, 0, 0));  
+        bAnggota.setBackground(new Color(140, 22, 22));
+        bJadwal.setBackground(new Color(140, 22, 22));
+        bDashboard.setBackground(new Color(140, 22, 22));
+        bPrestasi.setBackground(new Color(140, 22, 22));
+        bLaporan.setBackground(new Color(140, 22, 22));
+        bPengaturan.setBackground(new Color(140, 22, 22));*/
+        
+        // mengecek panel apakah kosong
+        if (pnSubMenuEvent.isVisible()){
+            pnSubMenuEvent.setVisible(false);
+        } else {
+            pnSubMenuEvent.setVisible(true);
+        }
+    }//GEN-LAST:event_bEventActionPerformed
+
+    private void bJDataJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bJDataJadwalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bJDataJadwalActionPerformed
+
+    private void bEDataEventActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEDataEventActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bEDataEventActionPerformed
+
+    private void bPrestasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPrestasiActionPerformed
+        // TODO add your handling code here:
+        //menyembunyikan sub panel
+        pnSubMenuAnggota.setVisible(false);
+        pnSubMenuJadwal.setVisible(false);
+        pnSubMenuEvent.setVisible(false);
+        pnSubMenuLaporan.setVisible(false);
+        pnSubMenuPengaturan.setVisible(false);
+    }//GEN-LAST:event_bPrestasiActionPerformed
+
+    private void bLaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLaporanActionPerformed
+        // TODO add your handling code here:
+        //menyembunyikan sub panel
+        pnSubMenuAnggota.setVisible(false);
+        pnSubMenuJadwal.setVisible(false);
+        pnSubMenuEvent.setVisible(false);
+        pnSubMenuPengaturan.setVisible(false);
+        
+        // mengecek panel apakah kosong
+        if (pnSubMenuLaporan.isVisible()){
+            pnSubMenuLaporan.setVisible(false);
+        } else {
+            pnSubMenuLaporan.setVisible(true);
+        }
+    }//GEN-LAST:event_bLaporanActionPerformed
+
+    private void bPengaturanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPengaturanActionPerformed
+        // TODO add your handling code here:
+        //menyembunyikan sub panel
+        pnSubMenuAnggota.setVisible(false);
+        pnSubMenuJadwal.setVisible(false);
+        pnSubMenuEvent.setVisible(false);
+        pnSubMenuLaporan.setVisible(false);
+        
+        // mengecek panel apakah kosong
+        if (pnSubMenuPengaturan.isVisible()){
+            pnSubMenuPengaturan.setVisible(false);
+        } else {
+            pnSubMenuPengaturan.setVisible(true);
+        }
+    }//GEN-LAST:event_bPengaturanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,9 +682,35 @@ public class mainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bAnggota;
+    private javax.swing.JButton bDashboard;
+    private javax.swing.JButton bDataA;
+    private javax.swing.JButton bEDataEvent;
+    private javax.swing.JButton bEHasil;
+    private javax.swing.JButton bERegistrasi;
+    private javax.swing.JButton bEvent;
+    private javax.swing.JButton bJAbsensi;
+    private javax.swing.JButton bJDataJadwal;
+    private javax.swing.JButton bJadwal;
+    private javax.swing.JButton bLRiwayat;
+    private javax.swing.JButton bLanggota;
+    private javax.swing.JButton bLaporan;
+    private javax.swing.JButton bPAbout;
+    private javax.swing.JButton bPManajemen;
+    private javax.swing.JButton bPengaturan;
+    private javax.swing.JButton bPrestasi;
+    private javax.swing.JButton bRiwayatL;
     private javax.swing.JPanel content;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JPanel pnKiri;
+    private javax.swing.JPanel pnSubMenuAnggota;
+    private javax.swing.JPanel pnSubMenuEvent;
+    private javax.swing.JPanel pnSubMenuJadwal;
+    private javax.swing.JPanel pnSubMenuLaporan;
+    private javax.swing.JPanel pnSubMenuPengaturan;
     private javax.swing.JPanel sidebar;
     // End of variables declaration//GEN-END:variables
 }
