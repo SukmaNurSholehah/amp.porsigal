@@ -5,7 +5,7 @@
 package frame;
 
 import com.formdev.flatlaf.FlatLightLaf;
-import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -67,10 +67,12 @@ public class mainFrame extends javax.swing.JFrame {
         bPManajemen = new javax.swing.JButton();
         bPAbout = new javax.swing.JButton();
         content = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        bLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1262, 700));
 
+        mainPanel.setBackground(new java.awt.Color(140, 22, 22));
         mainPanel.setPreferredSize(new java.awt.Dimension(1250, 700));
 
         pnKiri.setBackground(new java.awt.Color(140, 22, 22));
@@ -481,8 +483,36 @@ public class mainFrame extends javax.swing.JFrame {
         );
 
         content.setBackground(new java.awt.Color(250, 240, 230));
-        content.setPreferredSize(new java.awt.Dimension(950, 700));
+        content.setPreferredSize(new java.awt.Dimension(940, 650));
         content.setLayout(new java.awt.CardLayout());
+
+        jPanel2.setBackground(new java.awt.Color(140, 22, 22));
+        jPanel2.setPreferredSize(new java.awt.Dimension(940, 50));
+
+        bLogout.setBackground(new java.awt.Color(140, 22, 22));
+        bLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-log-out-48.png"))); // NOI18N
+        bLogout.setBorder(null);
+        bLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bLogoutActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(886, Short.MAX_VALUE)
+                .addComponent(bLogout)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 5, Short.MAX_VALUE)
+                .addComponent(bLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
@@ -492,31 +522,32 @@ public class mainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(pnKiri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, 926, Short.MAX_VALUE)
-                .addGap(12, 12, 12))
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(pnKiri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -656,6 +687,24 @@ public class mainFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bPengaturanActionPerformed
 
+    private void bLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLogoutActionPerformed
+        // TODO add your handling code here:
+         String judul = "Konfirmasi";
+        String pesan = "Apakah Anda yakin ingin keluar";
+        int optionType = JOptionPane.YES_NO_OPTION;
+        int messageType = JOptionPane.QUESTION_MESSAGE;
+        
+        int pilihan = JOptionPane.showConfirmDialog(
+                this, pesan, judul, optionType, messageType);
+        if (pilihan == JOptionPane.YES_OPTION){
+            System.exit(0);
+        } else if(pilihan == JOptionPane.NO_OPTION){
+            System.out.println("User clicked No - Staying logged in.");
+        } else if(pilihan == JOptionPane.CLOSED_OPTION){
+            System.out.println("Dialog closed without selection.");
+        }
+    }//GEN-LAST:event_bLogoutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -695,6 +744,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JButton bLRiwayat;
     private javax.swing.JButton bLanggota;
     private javax.swing.JButton bLaporan;
+    private javax.swing.JButton bLogout;
     private javax.swing.JButton bPAbout;
     private javax.swing.JButton bPManajemen;
     private javax.swing.JButton bPengaturan;
@@ -703,6 +753,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel content;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel pnKiri;
