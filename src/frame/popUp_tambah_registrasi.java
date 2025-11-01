@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package frame;
 
@@ -8,12 +8,12 @@ package frame;
  *
  * @author HP
  */
-public class pn_tambah_data_registrasi extends javax.swing.JPanel {
+public class popUp_tambah_registrasi extends javax.swing.JFrame {
 
     /**
-     * Creates new form pn_tambah_data_registrasi
+     * Creates new form popUp_tambah_registrasi
      */
-    public pn_tambah_data_registrasi() {
+    public popUp_tambah_registrasi() {
         initComponents();
     }
 
@@ -36,7 +36,7 @@ public class pn_tambah_data_registrasi extends javax.swing.JPanel {
         table_peserta = new javax.swing.JTable();
         b_simpan = new javax.swing.JButton();
 
-        setPreferredSize(new java.awt.Dimension(690, 590));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         pn_dasar.setBackground(new java.awt.Color(255, 255, 255));
         pn_dasar.setPreferredSize(new java.awt.Dimension(484, 539));
@@ -95,7 +95,7 @@ public class pn_tambah_data_registrasi extends javax.swing.JPanel {
                             .addComponent(t_id)
                             .addComponent(t_nama)
                             .addComponent(t_status, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE))))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_dasarLayout.createSequentialGroup()
                 .addGroup(pn_dasarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pn_dasarLayout.createSequentialGroup()
@@ -126,16 +126,18 @@ public class pn_tambah_data_registrasi extends javax.swing.JPanel {
                 .addGap(21, 21, 21))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pn_dasar, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pn_dasar, javax.swing.GroupLayout.DEFAULT_SIZE, 746, Short.MAX_VALUE)
+            .addComponent(pn_dasar, javax.swing.GroupLayout.DEFAULT_SIZE, 591, Short.MAX_VALUE)
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void t_namaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_namaActionPerformed
@@ -146,6 +148,41 @@ public class pn_tambah_data_registrasi extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_b_simpanActionPerformed
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(popUp_tambah_registrasi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(popUp_tambah_registrasi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(popUp_tambah_registrasi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(popUp_tambah_registrasi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new popUp_tambah_registrasi().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton b_cari;
