@@ -24,7 +24,6 @@ public class mainFrame extends javax.swing.JFrame {
         pnSubMenuAnggota.setVisible(false);
         pnSubMenuJadwal.setVisible(false);
         pnSubMenuEvent.setVisible(false);
-        pnSubMenuLaporan.setVisible(false);
         pnSubMenuPengaturan.setVisible(false);
     }
 
@@ -52,16 +51,12 @@ public class mainFrame extends javax.swing.JFrame {
         pnSubMenuJadwal = new javax.swing.JPanel();
         bJDataJadwal = new javax.swing.JButton();
         bJAbsensi = new javax.swing.JButton();
-        bEvent = new javax.swing.JButton();
+        bKegiatan = new javax.swing.JButton();
         pnSubMenuEvent = new javax.swing.JPanel();
         bEDataEvent = new javax.swing.JButton();
         bERegistrasi = new javax.swing.JButton();
         bEHasil = new javax.swing.JButton();
         bPrestasi = new javax.swing.JButton();
-        pnSubMenuLaporan = new javax.swing.JPanel();
-        bLanggota = new javax.swing.JButton();
-        bLRiwayat = new javax.swing.JButton();
-        bLaporan = new javax.swing.JButton();
         bPengaturan = new javax.swing.JButton();
         pnSubMenuPengaturan = new javax.swing.JPanel();
         bPManajemen = new javax.swing.JButton();
@@ -209,15 +204,15 @@ public class mainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        bEvent.setBackground(new java.awt.Color(140, 22, 22));
-        bEvent.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        bEvent.setForeground(new java.awt.Color(255, 255, 255));
-        bEvent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-event-20.png"))); // NOI18N
-        bEvent.setText("Event & Ujian");
-        bEvent.setBorder(null);
-        bEvent.addActionListener(new java.awt.event.ActionListener() {
+        bKegiatan.setBackground(new java.awt.Color(140, 22, 22));
+        bKegiatan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bKegiatan.setForeground(new java.awt.Color(255, 255, 255));
+        bKegiatan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-event-20.png"))); // NOI18N
+        bKegiatan.setText(" Kegiatan");
+        bKegiatan.setBorder(null);
+        bKegiatan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bEventActionPerformed(evt);
+                bKegiatanActionPerformed(evt);
             }
         });
 
@@ -287,60 +282,11 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
-        pnSubMenuLaporan.setBackground(new java.awt.Color(140, 22, 22));
-
-        bLanggota.setBackground(new java.awt.Color(140, 22, 22));
-        bLanggota.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        bLanggota.setForeground(new java.awt.Color(255, 255, 255));
-        bLanggota.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-member-20.png"))); // NOI18N
-        bLanggota.setText("Anggota");
-        bLanggota.setBorder(null);
-
-        bLRiwayat.setBackground(new java.awt.Color(140, 22, 22));
-        bLRiwayat.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        bLRiwayat.setForeground(new java.awt.Color(255, 255, 255));
-        bLRiwayat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-activity-history-20.png"))); // NOI18N
-        bLRiwayat.setText("Riwayat Event & Ujian");
-        bLRiwayat.setBorder(null);
-
-        javax.swing.GroupLayout pnSubMenuLaporanLayout = new javax.swing.GroupLayout(pnSubMenuLaporan);
-        pnSubMenuLaporan.setLayout(pnSubMenuLaporanLayout);
-        pnSubMenuLaporanLayout.setHorizontalGroup(
-            pnSubMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnSubMenuLaporanLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnSubMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bLanggota)
-                    .addComponent(bLRiwayat))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnSubMenuLaporanLayout.setVerticalGroup(
-            pnSubMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnSubMenuLaporanLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bLanggota)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bLRiwayat)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        bLaporan.setBackground(new java.awt.Color(140, 22, 22));
-        bLaporan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        bLaporan.setForeground(new java.awt.Color(255, 255, 255));
-        bLaporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-report-20.png"))); // NOI18N
-        bLaporan.setText("Laporan");
-        bLaporan.setBorder(null);
-        bLaporan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bLaporanActionPerformed(evt);
-            }
-        });
-
         bPengaturan.setBackground(new java.awt.Color(140, 22, 22));
         bPengaturan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         bPengaturan.setForeground(new java.awt.Color(255, 255, 255));
         bPengaturan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-setting-20.png"))); // NOI18N
-        bPengaturan.setText("Pengaturan");
+        bPengaturan.setText("User");
         bPengaturan.setBorder(null);
         bPengaturan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -394,26 +340,18 @@ public class mainFrame extends javax.swing.JFrame {
                     .addComponent(bAnggota)
                     .addComponent(bDashboard)
                     .addComponent(bJadwal)
-                    .addComponent(bEvent)
+                    .addComponent(bKegiatan)
                     .addComponent(bPengaturan)
-                    .addComponent(bPrestasi)
-                    .addComponent(bLaporan))
+                    .addComponent(bPrestasi))
                 .addContainerGap(124, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(pnSubMenuEvent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pnSubMenuJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pnSubMenuAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(36, 36, 36))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(pnSubMenuLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(pnSubMenuPengaturan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pnSubMenuPengaturan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnSubMenuEvent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnSubMenuJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnSubMenuAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -429,20 +367,16 @@ public class mainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnSubMenuJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bEvent)
+                .addComponent(bKegiatan)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnSubMenuEvent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bPrestasi)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bLaporan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnSubMenuLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bPengaturan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pnSubMenuPengaturan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel1);
@@ -490,7 +424,7 @@ public class mainFrame extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(940, 50));
 
         bLogout.setBackground(new java.awt.Color(140, 22, 22));
-        bLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-log-out-48.png"))); // NOI18N
+        bLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-logout-30.png"))); // NOI18N
         bLogout.setBorder(null);
         bLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -503,7 +437,7 @@ public class mainFrame extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(886, Short.MAX_VALUE)
+                .addContainerGap(904, Short.MAX_VALUE)
                 .addComponent(bLogout)
                 .addContainerGap())
         );
@@ -569,7 +503,6 @@ public class mainFrame extends javax.swing.JFrame {
         pnSubMenuAnggota.setVisible(false);
         pnSubMenuJadwal.setVisible(false);
         pnSubMenuEvent.setVisible(false);
-        pnSubMenuLaporan.setVisible(false);
         pnSubMenuPengaturan.setVisible(false);
         
         content.removeAll();
@@ -583,7 +516,6 @@ public class mainFrame extends javax.swing.JFrame {
         //menyembunyikan sub panel
         pnSubMenuJadwal.setVisible(false);
         pnSubMenuEvent.setVisible(false);
-        pnSubMenuLaporan.setVisible(false);
         pnSubMenuPengaturan.setVisible(false);
         
         // mengecek panel apakah kosong
@@ -600,7 +532,6 @@ public class mainFrame extends javax.swing.JFrame {
         //menyembunyikan sub panel
         pnSubMenuAnggota.setVisible(false);
         pnSubMenuEvent.setVisible(false);
-        pnSubMenuLaporan.setVisible(false);
         pnSubMenuPengaturan.setVisible(false);
         
         // mengecek panel apakah kosong
@@ -612,12 +543,11 @@ public class mainFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_bJadwalActionPerformed
 
-    private void bEventActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEventActionPerformed
+    private void bKegiatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKegiatanActionPerformed
         // TODO add your handling code here:
         //menyembunyikan sub panel
         pnSubMenuAnggota.setVisible(false);
         pnSubMenuJadwal.setVisible(false);
-        pnSubMenuLaporan.setVisible(false);
         pnSubMenuPengaturan.setVisible(false);
         
         /*mengatur warna saat tombol di klik
@@ -635,7 +565,7 @@ public class mainFrame extends javax.swing.JFrame {
         } else {
             pnSubMenuEvent.setVisible(true);
         }
-    }//GEN-LAST:event_bEventActionPerformed
+    }//GEN-LAST:event_bKegiatanActionPerformed
 
     private void bJDataJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bJDataJadwalActionPerformed
         // TODO add your handling code here:
@@ -651,25 +581,8 @@ public class mainFrame extends javax.swing.JFrame {
         pnSubMenuAnggota.setVisible(false);
         pnSubMenuJadwal.setVisible(false);
         pnSubMenuEvent.setVisible(false);
-        pnSubMenuLaporan.setVisible(false);
         pnSubMenuPengaturan.setVisible(false);
     }//GEN-LAST:event_bPrestasiActionPerformed
-
-    private void bLaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLaporanActionPerformed
-        // TODO add your handling code here:
-        //menyembunyikan sub panel
-        pnSubMenuAnggota.setVisible(false);
-        pnSubMenuJadwal.setVisible(false);
-        pnSubMenuEvent.setVisible(false);
-        pnSubMenuPengaturan.setVisible(false);
-        
-        // mengecek panel apakah kosong
-        if (pnSubMenuLaporan.isVisible()){
-            pnSubMenuLaporan.setVisible(false);
-        } else {
-            pnSubMenuLaporan.setVisible(true);
-        }
-    }//GEN-LAST:event_bLaporanActionPerformed
 
     private void bPengaturanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPengaturanActionPerformed
         // TODO add your handling code here:
@@ -677,7 +590,6 @@ public class mainFrame extends javax.swing.JFrame {
         pnSubMenuAnggota.setVisible(false);
         pnSubMenuJadwal.setVisible(false);
         pnSubMenuEvent.setVisible(false);
-        pnSubMenuLaporan.setVisible(false);
         
         // mengecek panel apakah kosong
         if (pnSubMenuPengaturan.isVisible()){
@@ -737,13 +649,10 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JButton bEDataEvent;
     private javax.swing.JButton bEHasil;
     private javax.swing.JButton bERegistrasi;
-    private javax.swing.JButton bEvent;
     private javax.swing.JButton bJAbsensi;
     private javax.swing.JButton bJDataJadwal;
     private javax.swing.JButton bJadwal;
-    private javax.swing.JButton bLRiwayat;
-    private javax.swing.JButton bLanggota;
-    private javax.swing.JButton bLaporan;
+    private javax.swing.JButton bKegiatan;
     private javax.swing.JButton bLogout;
     private javax.swing.JButton bPAbout;
     private javax.swing.JButton bPManajemen;
@@ -760,7 +669,6 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel pnSubMenuAnggota;
     private javax.swing.JPanel pnSubMenuEvent;
     private javax.swing.JPanel pnSubMenuJadwal;
-    private javax.swing.JPanel pnSubMenuLaporan;
     private javax.swing.JPanel pnSubMenuPengaturan;
     private javax.swing.JPanel sidebar;
     // End of variables declaration//GEN-END:variables

@@ -4,12 +4,13 @@
  */
 package frame;
 import java.awt.Color;
+import java.awt.BasicStroke;
+import java.awt.geom.Ellipse2D;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.renderer.category.LineAndShapeRenderer;
-import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 
@@ -27,7 +28,7 @@ public class dashboard extends javax.swing.JPanel {
         tampilkanDiagramKehadiran();
       
 } 
-     private void tampilkanDiagramKehadiran() {
+    private void tampilkanDiagramKehadiran() {
     DefaultCategoryDataset dataset = new DefaultCategoryDataset();
     
     // Data dummy (bisa diganti nanti dari database)
@@ -36,34 +37,33 @@ public class dashboard extends javax.swing.JPanel {
     dataset.addValue(90, "Kehadiran", "Maret");
     dataset.addValue(82, "Kehadiran", "April");
 
-     JFreeChart chart = ChartFactory.createBarChart(
-        "", // Judul grafik kosong karena sudah ada label di panel
-        "Bulan", 
-        "Persentase", 
+    // Membuat grafik garis (Line Chart)
+    JFreeChart chart = ChartFactory.createLineChart(
+        "",            // Judul grafik (kosong)
+        "Bulan",       // Label sumbu X
+        "Persentase",  // Label sumbu Y
         dataset
     );
-    
-    // Warna dasar tema
-        Color merahTua = new Color(140, 22, 22); // merah tua khas dashboard kamu
-        Color cream = new Color(255, 245, 230);  // warna latar belakang lembut
 
-        // Atur tampilan plot
-        CategoryPlot plot = chart.getCategoryPlot();
-        plot.setBackgroundPaint(cream);        // warna latar belakang
-        plot.setOutlinePaint(null);            // tanpa garis tepi
-        plot.setRangeGridlinePaint(merahTua);  // garis grid vertikal/horizontal berwarna merah tua
-        plot.setDomainGridlinePaint(merahTua);
+    // Warna tema
+    Color merahTua = new Color(140, 22, 22); // merah tua khas dashboard
+    Color cream = new Color(255, 245, 230);  // latar lembut
 
-        // Atur warna garis grafik
-        BarRenderer renderer = (BarRenderer) plot.getRenderer();
-        renderer.setSeriesPaint(0, merahTua); // batang berwarna merah tua
-        renderer.setBarPainter(new org.jfree.chart.renderer.category.StandardBarPainter()); // hilangkan efek gradasi 3D
-        renderer.setShadowVisible(false); // hilangkan bayangan default
-        renderer.setItemMargin(0.05); // jarak antar batang
-        
-        // Hapus background chart
-        chart.setBackgroundPaint(cream);
+    // Atur plot (area dalam grafik)
+    CategoryPlot plot = chart.getCategoryPlot();
+    plot.setBackgroundPaint(cream);
+    plot.setOutlinePaint(null);
+    plot.setRangeGridlinePaint(merahTua);
+    plot.setDomainGridlinePaint(merahTua);
 
+    // Atur warna garis dan titik data
+    LineAndShapeRenderer renderer = new LineAndShapeRenderer();
+    renderer.setSeriesPaint(0, merahTua);         // garis merah tua
+    renderer.setSeriesStroke(0, new BasicStroke(3.0f)); // ketebalan garis
+    renderer.setSeriesShapesVisible(0, true);     // tampilkan titik data
+    renderer.setSeriesShape(0, new Ellipse2D.Double(-4, -4, 8, 8)); // bentuk titik bulat kecil
+
+    plot.setRenderer(renderer);
     ChartPanel chartPanel = new ChartPanel(chart);
     chartPanel.setSize(pnDiagramKehadiran.getWidth(), pnDiagramKehadiran.getHeight());
     chartPanel.setVisible(true);
