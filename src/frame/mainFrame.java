@@ -286,7 +286,7 @@ public class mainFrame extends javax.swing.JFrame {
         bPengaturan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         bPengaturan.setForeground(new java.awt.Color(255, 255, 255));
         bPengaturan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PNG/icons8-setting-20.png"))); // NOI18N
-        bPengaturan.setText("User");
+        bPengaturan.setText("Pengaturan");
         bPengaturan.setBorder(null);
         bPengaturan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -343,7 +343,7 @@ public class mainFrame extends javax.swing.JFrame {
                     .addComponent(bKegiatan)
                     .addComponent(bPengaturan)
                     .addComponent(bPrestasi))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
