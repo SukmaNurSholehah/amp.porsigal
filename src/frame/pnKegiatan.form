@@ -48,8 +48,8 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="311" max="32767" attributes="0"/>
               </Group>
@@ -95,7 +95,7 @@
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jScrollPane1" min="-2" pref="582" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" pref="131" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="35" max="32767" attributes="0"/>
                   </Group>
@@ -140,7 +140,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="12" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Tabel Data Event dan Ujian"/>
+                <Property name="text" type="java.lang.String" value="Tabel Data Kegiatan"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -153,7 +153,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="16" green="16" red="8c" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="EVENT DAN UJIAN"/>
+            <Property name="text" type="java.lang.String" value="KEGIATAN"/>
           </Properties>
         </Component>
       </SubComponents>

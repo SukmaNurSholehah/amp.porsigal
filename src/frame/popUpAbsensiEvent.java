@@ -8,12 +8,12 @@ package frame;
  *
  * @author HP
  */
-public class popUp_absensi_event extends javax.swing.JFrame {
+public class popUpAbsensiEvent extends javax.swing.JFrame {
 
     /**
      * Creates new form popUp_absensi_event
      */
-    public popUp_absensi_event() {
+    public popUpAbsensiEvent() {
         initComponents();
     }
 
@@ -187,21 +187,23 @@ public class popUp_absensi_event extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(popUp_absensi_event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(popUpAbsensiEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(popUp_absensi_event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(popUpAbsensiEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(popUp_absensi_event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(popUpAbsensiEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(popUp_absensi_event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(popUpAbsensiEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new popUp_absensi_event().setVisible(true);
+                new popUpAbsensiEvent().setVisible(true);
             }
         });
     }

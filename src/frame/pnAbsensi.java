@@ -8,12 +8,12 @@ package frame;
  *
  * @author HP
  */
-public class pn_absensi extends javax.swing.JPanel {
+public class pnAbsensi extends javax.swing.JPanel {
 
     /**
      * Creates new form pn_absensi_event
      */
-    public pn_absensi() {
+    public pnAbsensi() {
         initComponents();
     }
 

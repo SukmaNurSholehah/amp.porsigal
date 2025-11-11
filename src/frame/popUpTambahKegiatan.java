@@ -10,12 +10,12 @@ package frame;
  *
  * @author HP
  */
-public class popUp_tambah_event extends javax.swing.JFrame {
+public class popUpTambahKegiatan extends javax.swing.JFrame {
 
     /**
      * Creates new form popUp_tambah_event
      */
-    public popUp_tambah_event() {
+    public popUpTambahKegiatan() {
         initComponents();
        
     }
@@ -220,21 +220,23 @@ public class popUp_tambah_event extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(popUp_tambah_event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(popUpTambahKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(popUp_tambah_event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(popUpTambahKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(popUp_tambah_event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(popUpTambahKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(popUp_tambah_event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(popUpTambahKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new popUp_tambah_event().setVisible(true);
+                new popUpTambahKegiatan().setVisible(true);
             }
         });
     }
