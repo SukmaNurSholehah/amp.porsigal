@@ -30,7 +30,7 @@ public class pn_DjadwalLatihan extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jCalendar1 = new com.toedter.calendar.JCalendar();
         JPanel = new javax.swing.JPanel();
-        keterangan = new javax.swing.JLabel();
+        lKeterangan = new javax.swing.JLabel();
         bEdit = new javax.swing.JButton();
         bHapus = new javax.swing.JButton();
 
@@ -43,7 +43,7 @@ public class pn_DjadwalLatihan extends javax.swing.JPanel {
 
         JPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Keterangan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
-        keterangan.setText("jLabel2");
+        lKeterangan.setText("jLabel2");
 
         javax.swing.GroupLayout JPanelLayout = new javax.swing.GroupLayout(JPanel);
         JPanel.setLayout(JPanelLayout);
@@ -51,14 +51,14 @@ public class pn_DjadwalLatihan extends javax.swing.JPanel {
             JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(keterangan, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
+                .addComponent(lKeterangan, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
                 .addContainerGap())
         );
         JPanelLayout.setVerticalGroup(
             JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(keterangan, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addComponent(lKeterangan, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -135,6 +135,6 @@ public class pn_DjadwalLatihan extends javax.swing.JPanel {
     private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel keterangan;
+    private javax.swing.JLabel lKeterangan;
     // End of variables declaration//GEN-END:variables
 }
