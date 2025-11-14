@@ -33,6 +33,7 @@ public class pnKegiatan extends javax.swing.JPanel {
         table_event = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        bExport = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(950, 650));
 
@@ -86,6 +87,12 @@ public class pnKegiatan extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(140, 22, 22));
         jLabel1.setText("KEGIATAN");
 
+        bExport.setBackground(new java.awt.Color(255, 51, 51));
+        bExport.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bExport.setForeground(new java.awt.Color(255, 255, 255));
+        bExport.setText("Export PDF");
+        bExport.setToolTipText("");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -97,6 +104,10 @@ public class pnKegiatan extends javax.swing.JPanel {
                     .addComponent(jButton1)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(311, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bExport)
+                .addGap(28, 28, 28))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,7 +118,9 @@ public class pnKegiatan extends javax.swing.JPanel {
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(bExport)
+                .addGap(16, 16, 16))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -124,6 +137,7 @@ public class pnKegiatan extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bExport;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

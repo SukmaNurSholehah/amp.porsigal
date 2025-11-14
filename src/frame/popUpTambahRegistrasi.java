@@ -35,6 +35,9 @@ public class popUpTambahRegistrasi extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         table_peserta = new javax.swing.JTable();
         b_simpan = new javax.swing.JButton();
+        bAdd = new javax.swing.JButton();
+        bDetail = new javax.swing.JButton();
+        bBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,12 +75,28 @@ public class popUpTambahRegistrasi extends javax.swing.JFrame {
         b_simpan.setBackground(new java.awt.Color(0, 255, 51));
         b_simpan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         b_simpan.setForeground(new java.awt.Color(255, 255, 255));
-        b_simpan.setText("Simpan");
+        b_simpan.setText("Save");
         b_simpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b_simpanActionPerformed(evt);
             }
         });
+
+        bAdd.setBackground(new java.awt.Color(0, 204, 255));
+        bAdd.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bAdd.setForeground(new java.awt.Color(255, 255, 255));
+        bAdd.setText("Add");
+        bAdd.setToolTipText("");
+
+        bDetail.setBackground(new java.awt.Color(153, 153, 153));
+        bDetail.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bDetail.setForeground(new java.awt.Color(255, 255, 255));
+        bDetail.setText("Detail");
+
+        bBack.setBackground(new java.awt.Color(255, 0, 102));
+        bBack.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bBack.setForeground(new java.awt.Color(255, 255, 255));
+        bBack.setText("<Back");
 
         javax.swing.GroupLayout pn_dasarLayout = new javax.swing.GroupLayout(pn_dasar);
         pn_dasar.setLayout(pn_dasarLayout);
@@ -94,8 +113,10 @@ public class popUpTambahRegistrasi extends javax.swing.JFrame {
                             .addComponent(b_cari)
                             .addComponent(t_id)
                             .addComponent(t_nama)
-                            .addComponent(t_status, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE))))
-                .addContainerGap(79, Short.MAX_VALUE))
+                            .addComponent(t_status, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(bAdd)))
+                .addContainerGap(30, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_dasarLayout.createSequentialGroup()
                 .addGroup(pn_dasarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pn_dasarLayout.createSequentialGroup()
@@ -103,6 +124,10 @@ public class popUpTambahRegistrasi extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                     .addGroup(pn_dasarLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(bBack)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(bDetail)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(b_simpan)))
                 .addGap(26, 26, 26))
         );
@@ -118,11 +143,16 @@ public class popUpTambahRegistrasi extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(t_nama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(t_status, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pn_dasarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(t_status, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bAdd))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(b_simpan)
+                .addGroup(pn_dasarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(b_simpan)
+                    .addComponent(bDetail)
+                    .addComponent(bBack))
                 .addGap(21, 21, 21))
         );
 
@@ -187,6 +217,9 @@ public class popUpTambahRegistrasi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bAdd;
+    private javax.swing.JButton bBack;
+    private javax.swing.JButton bDetail;
     private javax.swing.JButton b_cari;
     private javax.swing.JButton b_simpan;
     private javax.swing.JLabel jLabel1;
